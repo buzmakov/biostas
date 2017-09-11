@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markers</title>
+</head>
+<body>
+    <ol>
+    {% for marker in markers %}
+    <li><a href="{{ url_for('get_marker',marker_name=marker['Instance']) }}">{{ marker['Instance'] }}</a></li>
+    {% endfor %}
+    </ol>
+</body>
+</html>
